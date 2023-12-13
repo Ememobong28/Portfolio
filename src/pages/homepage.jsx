@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
 	faGithub,
-	faStackOverflow,
 	faInstagram,
+	faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
@@ -104,23 +103,37 @@ const Homepage = () => {
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
-											src="homepage.jpg"
+											src="Picture.jpg"
 											alt="about"
 											className="homepage-image"
 										/>
 									</div>
 								</div>
+
+
+								<div className="resume-download-container">
+									<a href="https://docs.google.com/document/d/1RgaL9Q_mnKLBa5Fw8co-_lISONOLvHnw2UASL1e_OKw/export?format=pdf"
+										download="Immanuella_Umoren_Resume.pdf"
+										className="resume-download-link">
+										<FontAwesomeIcon
+											icon={faDownload}
+											className="fa fa-download"
+										/>
+										Download Resume
+									</a>
+								</div>
+
 							</div>
 						</div>
 
 						<div className="homepage-socials">
 							<a
-								href={INFO.socials.twitter}
+								href={INFO.socials.linkedin}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faTwitter}
+									icon={faLinkedinIn}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -131,16 +144,6 @@ const Homepage = () => {
 							>
 								<FontAwesomeIcon
 									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
 									className="homepage-social-icon"
 								/>
 							</a>
